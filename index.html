@@ -4,20 +4,59 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Test 2</title>
+    <title>Test 3</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
     <style>
         .top-bar {
             background-color: gold;
             position: sticky;
             top: 0;
+            z-index: 10000000;
         }
 
-        .nav-link {
-            background-color: lightblue;
-            padding: 0.2em 0.2em;
+        .top-bar .nav {
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+        }
+
+        .top-bar .nav-link {
+            padding: 0.1em 0.4em;
             margin: 0.2em;
+            background-color: black;
+            color: white;
+        }
+
+        .inner-topbar {
+            background-color: goldenrod;
+            position: sticky;
+            top: 33px;
+            z-index: 10000000;
+        }
+
+        .inner-topbar .nav {
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+        }
+
+        .inner-topbar .nav-link {
+            padding: 0.1em 0.4em;
+            margin: 0.2em;
+            background-color: #dd5656;
+            color: white;
+        }
+
+        .inner-topbar .nav .active {
+            background-color: #15bb60;
+            color: white;
+        }
+
+        pre,
+        code {
+            padding: 0;
+            margin: 0;
+            white-space: pre-line !important;
         }
     </style>
 </head>
@@ -25,55 +64,1156 @@
 <body>
 
     <div class="top-bar">
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <ul class="nav nav-pills">
             <li class="nav-item" role="presentation">
                 <button type="button" class="nav-link" data-bs-toggle="pill"
                     data-bs-target="#pills-intro">Intro</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button type="button" class="nav-link" data-bs-toggle="pill"
-                    data-bs-target="#pills-profile">Profile</button>
+                    data-bs-target="#pills-manual">Manual</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button type="button" class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-auto">Auto</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button type="button" class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-java">Java</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button type="button" class="nav-link" data-bs-toggle="pill"
-                    data-bs-target="#pills-contact">Contact</button>
+                    data-bs-target="#pills-programs">Programs</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button type="button" class="nav-link" data-bs-toggle="pill"
+                    data-bs-target="#pills-selenium">Selenium</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button type="button" class="nav-link" data-bs-toggle="pill"
+                    data-bs-target="#pills-testng">TestNG</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button type="button" class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-rest">Rest</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button type="button" class="nav-link" data-bs-toggle="pill"
+                    data-bs-target="#pills-postman">Postman</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button type="button" class="nav-link" data-bs-toggle="pill"
+                    data-bs-target="#pills-maven">Maven</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button type="button" class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-poi">POI</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button type="button" class="nav-link" data-bs-toggle="pill"
+                    data-bs-target="#pills-jenkins">Jenkins</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button type="button" class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-git">Git</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button type="button" class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-jira">Jira</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button type="button" class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-sql">SQL</button>
             </li>
         </ul>
-    </div>
-
-    <div class="container">
-        <div class="tab-content" id="pills-tabContent">
+    </div><!-- top bar end -->
+    <div class="container-fluid bg-light p-4">
+        <div class="tab-content">
             <div class="tab-pane fade" id="pills-intro">
-                <h1>Introduction</h1>
-                <p>Hi, my name is [Your Name], and I’m an experienced automation tester with
-                    [X] years of experience in the software testing domain. My expertise lies in
-                    automating test cases to ensure the efficiency and quality of software
-                    applications. I have hands-on experience with popular automation tools
-                    such as Selenium, TestNG, and Cucumber, as well as proficiency in
-                    languages like Java, and JavaScript. I have a strong background in creating
-                    and maintaining test scripts, developing robust automation frameworks, and
-                    working closely with cross-functional teams to deliver high-quality software.</p>
-                <p> Additionally, I’m skilled at using CI/CD tools like Jenkins and Git for
-                    continuous integration and delivery, which helps in seamless test execution.
-                    I have a strong eye for detail and i am passionate about identifying and
-                    resolving issues early in the development cycle, which helps in reducing
-                    defects in production. My experience spans across both UI and API testing,
-                    and I’m constantly learning and adapting to new technologies in the
-                    automation space to ensure my skillset remains up to date.</p>
-    
-            </div>
-            <div class="tab-pane fade" id="pills-profile">
-                <h1>Profile</h1>
-            </div>
-            <div class="tab-pane fade" id="pills-contact">
-                <h1>Contact</h1>
-            </div>
+                <div class="content">
+                    <p>Hi, my name is [Your Name], and I’m an experienced automation tester with [X] years of experience
+                        in the software testing domain.</p>
+                    <p>My expertise lies in automating test cases to ensure the efficiency and quality of software
+                        applications.</p>
+                    <p>I have hands-on experience with popular automation tools such as Selenium, TestNG, and Cucumber,
+                        as well as proficiency in languages like Java, and JavaScript.</p>
+                    <p>I have a strong background in creating and maintaining test scripts, developing robust automation
+                        frameworks, and working closely with cross-functional teams to deliver high-quality software.
+                    </p>
+                    <p>Additionally, I’m skilled at using CI/CD tools like Jenkins and Git for continuous integration
+                        and delivery, which helps in seamless test execution.</p>
+                    <p>I have a strong eye for detail and i am passionate about identifying and resolving issues early
+                        in the development cycle, which helps in reducing defects in production.</p>
+                    <p>My experience spans across both UI and API testing, and I’m constantly learning and adapting to
+                        new technologies in the automation space to ensure my skillset remains up to date.</p>
+                </div>
+            </div><!-- intro content end -->
+            <div class="tab-pane fade" id="pills-manual">
+                <h1>Tab Manual</h1>
+            </div><!-- manual content end -->
+            <div class="tab-pane fade" id="pills-auto">
+                <h1>Tab Auto</h1>
+            </div><!-- auto content end -->
+            <div class="tab-pane fade" id="pills-java">
+                <h1>Tab Java</h1>
+                <div class="content">
+                    <div class="inner-topbar">
+                        <ul class="nav nav-pills mb-3">
+                            <li class="nav-item" role="presentation">
+                                <button type="button" class="nav-link" data-bs-toggle="pill"
+                                    data-bs-target="#java-oops">Oops</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button type="button" class="nav-link" data-bs-toggle="pill"
+                                    data-bs-target="#java-file">File</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button type="button" class="nav-link" data-bs-toggle="pill"
+                                    data-bs-target="#java-exception">Exception</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button type="button" class="nav-link" data-bs-toggle="pill"
+                                    data-bs-target="#java-array">Array</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button type="button" class="nav-link" data-bs-toggle="pill"
+                                    data-bs-target="#java-string">String</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button type="button" class="nav-link" data-bs-toggle="pill"
+                                    data-bs-target="#java-collection">Collection</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button type="button" class="nav-link" data-bs-toggle="pill"
+                                    data-bs-target="#java-jdbc">JDBC</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane fade" id="java-oops"></div><!-- java oops end -->
+                        <div class="tab-pane fade" id="java-file"></div><!-- java file end -->
+                        <div class="tab-pane fade" id="java-exception"></div><!-- java exception end -->
+                        <div class="tab-pane fade" id="java-array">
+                            <pre>
+                                <code class="language-java">
+// Arrays.toString() - Converts an array to a string representation
+int[] array = {1, 2, 3, 4, 5};
+String arrayString = Arrays.toString(array);  // "[1, 2, 3, 4, 5]"
+
+// Arrays.sort() - Sorts the specified array into ascending numerical order
+Arrays.sort(array);  // [1, 2, 3, 4, 5] (array is sorted)
+
+// Arrays.copyOf() - Copies the specified array, truncating or padding with zeros
+int[] copiedArray = Arrays.copyOf(array, 10);  // [1, 2, 3, 4, 5, 0, 0, 0, 0, 0]
+
+// Arrays.copyOfRange() - Copies a specified range of the array
+int[] copiedRangeArray = Arrays.copyOfRange(array, 1, 4);  // [2, 3, 4]
+
+// Arrays.equals() - Compares two arrays to check if they are equal
+boolean equalsResult = Arrays.equals(array, copiedArray);  // false (arrays are different)
+
+// Arrays.fill() - Fills the specified array with the specified value
+Arrays.fill(array, 9);  // [9, 9, 9, 9, 9] (all elements set to 9)
+
+// Arrays.binarySearch() - Searches the array for the specified value using binary search
+int[] sortedArray = {1, 2, 3, 4, 5};
+int index = Arrays.binarySearch(sortedArray, 3);  // 2 (index of element 3)
+
+// Arrays.hashCode() - Returns the hash code of the array
+int arrayHashCode = Arrays.hashCode(array);  // Example hash code value (e.g., -1539842302)
+
+// Arrays.deepEquals() - Compares two arrays deeply for equality (works for multi-dimensional arrays)
+int[][] multiDimArray1 = {{1, 2}, {3, 4}};
+int[][] multiDimArray2 = {{1, 2}, {3, 4}};
+boolean deepEqualsResult = Arrays.deepEquals(multiDimArray1, multiDimArray2);  // true
+
+// Arrays.deepHashCode() - Returns a deep hash code for a multi-dimensional array
+int multiDimArrayHashCode = Arrays.deepHashCode(multiDimArray1);  // Example deep hash code value
+
+// Arrays.asList() - Converts an array to a list (returns a fixed-size list backed by the array)
+List<String> list = Arrays.asList("one", "two", "three");  // [one, two, three]
+
+// Arrays.stream() - Converts an array to a stream (for functional programming)
+int[] nums = {1, 2, 3, 4, 5};
+int sum = Arrays.stream(nums).sum();  // 15 (sum of all elements)
+
+// Arrays.setAll() - Sets all elements of the array using an index-based generator function
+Arrays.setAll(array, i -> i * 2);  // [0, 2, 4, 6, 8] (elements set to index * 2)
+
+// Arrays.parallelSort() - Sorts the array in parallel
+Arrays.parallelSort(array);  // [0, 2, 4, 6, 8] (array sorted in parallel)
+
+// Arrays.equals() - Checks if two arrays are equal element-wise
+int[] array1 = {1, 2, 3};
+int[] array2 = {1, 2, 3};
+boolean areArraysEqual = Arrays.equals(array1, array2);  // true
+
+// Arrays.stream() - Converts an array to a stream for further processing (e.g., filtering, mapping)
+int[] numbers = {10, 20, 30, 40, 50};
+int[] filteredNumbers = Arrays.stream(numbers).filter(n -> n > 30).toArray();  // [40, 50]
+                                </code>
+                            </pre>
+                        </div><!-- java array end -->
+                        <div class="tab-pane fade" id="java-string">
+                            <pre>
+                                <code class="language-java">
+// charAt() - Returns the character at the specified index (position)
+String str = "hello";
+char c = str.charAt(2);  // c (Character at index 2)
+
+// codePointAt() - Returns the Unicode of the character at the specified index
+int codePoint = str.codePointAt(2);  // 99 (Unicode for 'c')
+
+// codePointBefore() - Returns the Unicode of the character before the specified index
+int codePointBefore = str.codePointBefore(2);  // 97 (Unicode for 'a')
+
+// codePointCount() - Returns the number of Unicode values found in a string
+int codePointCount = str.codePointCount(0, str.length());  // 5 (Total Unicode values in "hello")
+
+// compareTo() - Compares two strings lexicographically
+int compareResult = str.compareTo("abc");  // Negative value (since "hello" is greater than "abc")
+
+// compareToIgnoreCase() - Compares two strings lexicographically, ignoring case differences
+int compareIgnoreCase = str.compareToIgnoreCase("HELLO");  // 0 (if str equals "HELLO" ignoring case)
+
+// concat() - Appends a string to the end of another string
+String concatResult = str.concat(" world!");  // "hello world!"
+
+// contains() - Checks whether a string contains a sequence of characters
+boolean containsResult = str.contains("ell");  // true (since "ell" is in "hello")
+
+// contentEquals() - Checks whether a string contains the exact same sequence of characters of the specified CharSequence or StringBuffer
+boolean contentEqualsResult = str.contentEquals(new StringBuffer("hello"));  // true
+
+// copyValueOf() - Returns a String that represents the characters of the character array
+char[] charArray = {'h', 'e', 'l', 'l', 'o'};
+String copyResult = String.copyValueOf(charArray);  // "hello"
+
+// endsWith() - Checks whether a string ends with the specified character(s)
+boolean endsWithResult = str.endsWith("lo");  // true
+
+// equals() - Compares two strings. Returns true if the strings are equal, and false if not
+boolean equalsResult = str.equals("hello");  // true
+
+// equalsIgnoreCase() - Compares two strings, ignoring case considerations
+boolean equalsIgnoreCaseResult = str.equalsIgnoreCase("HELLO");  // true
+
+// format() - Returns a formatted string using the specified locale, format string, and arguments
+String formatted = String.format("Hello, %s!", "world");  // "Hello, world!"
+
+// getBytes() - Converts a string into an array of bytes
+byte[] byteArray = str.getBytes();  // [104, 101, 108, 108, 111]
+
+// getChars() - Copies characters from a string to an array of chars
+char[] charBuffer = new char[5];
+str.getChars(0, 5, charBuffer, 0);  // charBuffer now holds {'h', 'e', 'l', 'l', 'o'}
+
+// hashCode() - Returns the hash code of a string
+int hashCode = str.hashCode();  // 99162322 (hash code for "hello")
+
+// indexOf() - Returns the position of the first found occurrence of specified characters in a string
+int indexOfResult = str.indexOf("l");  // 2 (first occurrence of 'l')
+
+// intern() - Returns the canonical representation for the string object
+String interned = str.intern();  // "hello" (this is the canonical form)
+
+// isEmpty() - Checks whether a string is empty or not
+boolean isEmptyResult = str.isEmpty();  // false
+
+// join() - Joins one or more strings with a specified separator
+String joined = String.join(", ", "apple", "banana", "cherry");  // "apple, banana, cherry"
+
+// lastIndexOf() - Returns the position of the last found occurrence of specified characters in a string
+int lastIndex = str.lastIndexOf("l");  // 3 (last occurrence of 'l')
+
+// length() - Returns the length of a specified string
+int length = str.length();  // 5 (length of "hello")
+
+// matches() - Searches a string for a match against a regular expression, and returns the matches
+boolean matchesResult = str.matches("hello");  // true (exact match)
+
+// offsetByCodePoints() - Returns the index within this String that is offset from the given index by codePointOffset code points
+int offsetResult = str.offsetByCodePoints(0, 2);  // 2 (index at code point offset)
+
+// regionMatches() - Tests if two string regions are equal
+boolean regionMatch = str.regionMatches(0, "hello", 0, 5);  // true
+
+// replace() - Searches a string for a specified value, and returns a new string where the specified values are replaced
+String replaced = str.replace("l", "z");  // "hezzo"
+
+// replaceAll() - Replaces each substring of this string that matches the given regular expression with the given replacement
+String replaceAllResult = str.replaceAll("l", "z");  // "hezzo"
+
+// replaceFirst() - Replaces the first occurrence of a substring that matches the given regular expression with the given replacement
+String replaceFirstResult = str.replaceFirst("l", "z");  // "hezlo"
+
+// split() - Splits a string into an array of substrings
+String[] splitResult = str.split("l");  // ["he", "", "o"]
+
+// startsWith() - Checks whether a string starts with specified characters
+boolean startsWithResult = str.startsWith("he");  // true
+
+// subSequence() - Returns a new character sequence that is a subsequence of this sequence
+CharSequence subSequenceResult = str.subSequence(1, 4);  // "ell"
+
+// substring() - Returns a new string which is the substring of a specified string
+String substringResult = str.substring(1, 4);  // "ell"
+
+// toCharArray() - Converts this string to a new character array
+char[] toCharArrayResult = str.toCharArray();  // ['h', 'e', 'l', 'l', 'o']
+
+// toLowerCase() - Converts a string to lower case letters
+String toLower = str.toLowerCase();  // "hello"
+
+// toString() - Returns the value of a String object
+String toStringResult = str.toString();  // "hello"
+
+// toUpperCase() - Converts a string to upper case letters
+String toUpper = str.toUpperCase();  // "HELLO"
+
+// trim() - Removes whitespace from both ends of a string
+String trimmed = "  hello  ".trim();  // "hello"
+
+// valueOf() - Returns the string representation of the specified value
+String valueOfResult = String.valueOf(123);  // "123"
+                                </code>
+                            </pre>
+                        </div><!-- java string end -->
+                        <div class="tab-pane fade" id="java-collection"></div><!-- java collection end -->
+                        <div class="tab-pane fade" id="java-jdbc"></div><!-- java jdbc end -->
+                    </div>
+                </div>
+            </div><!-- java content end -->
+            <div class="tab-pane fade" id="pills-programs">
+                <h1>Tab Programs</h1>
+                <div class="content">
+                    <div class="accordion" id="accordion-programs">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button type="button" class="accordion-button p-2" data-bs-toggle="collapse"
+                                    data-bs-target="#programs-1">
+                                    cont digit in number
+                                </button>
+                            </h2>
+                            <div id="programs-1" class="accordion-collapse collapse"
+                                data-bs-parent="#accordion-programs">
+                                <div class="accordion-body p-0">
+                                    <pre>
+                                <code class="language-java">
+                                  public static int countDigits() {
+                                    Scanner scanner = new Scanner(System.in);
+                                    int no = 0, a = 0;
+                                    System.out.print("Enter an integer: ");
+                                    no = scanner.nextInt();
+                                 
+                                    if (no < 0) {
+                                      no = no * -1; // Convert to positive
+                                    } else if (no == 0) {
+                                      return 1; // Special case for zero
+                                    }
+                                 
+                                    while (no > 0) {
+                                      no = no / 10; // Remove the last digit
+                                      a++; // Increment the digit count
+                                    }
+                                 
+                                    return a; // Return the number of digits
+                                  }
+                                </code>
+                              </pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button type="button" class="accordion-button  p-2" data-bs-toggle="collapse"
+                                    data-bs-target="#programs-2">
+                                    Palindrome number
+                                </button>
+                            </h2>
+                            <div id="programs-2" class="accordion-collapse collapse"
+                                data-bs-parent="#accordion-programs">
+                                <div class="accordion-body p-0">
+                                    <pre>
+                                <code class="language-java">
+                                  public static boolean isPalindrome(int num) {
+                                    // Store the original number to compare later
+                                    int originalNumber = num;
+                                    int reversedNumber = 0; // Variable to hold the reversed number
+                                    // Loop until num becomes 0
+                                    while (num != 0) {
+                                      // Get the last digit of num
+                                      int digit = num % 10;
+                                      // Build the reversed number by shifting the existing digits left and adding the new digit
+                                      reversedNumber = reversedNumber * 10 + digit;
+                                      // Remove the last digit from num
+                                      num = num / 10;
+                                    }
+                                    // Check if the original number is equal to the reversed number
+                                    return originalNumber == reversedNumber;
+                                  }
+                                </code>
+                              </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- programs content end -->
+            <div class="tab-pane fade" id="pills-selenium">
+                <h1>Tab Selenium</h1>
+                <div class="content">
+                    <div class="inner-topbar">
+                        <ul class="nav nav-pills mb-3">
+                            <li class="nav-item" role="presentation">
+                                <button type="button" class="nav-link" data-bs-toggle="pill"
+                                    data-bs-target="#selenium-loc">Locators</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button type="button" class="nav-link" data-bs-toggle="pill"
+                                    data-bs-target="#selenium-action">Action</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button type="button" class="nav-link" data-bs-toggle="pill"
+                                    data-bs-target="#selenium-wait">Wait</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane fade" id="selenium-loc">
+                            <div class="accordion" id="accordion-locators">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button type="button" class="accordion-button collapsed p-2"
+                                            data-bs-toggle="collapse" data-bs-target="#loc-1">
+                                            Locators
+                                        </button>
+                                    </h2>
+                                    <div id="loc-1" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordion-locators">
+                                        <div class="accordion-body p-0">
+                                            <pre>
+                                                <code class="language-java">
+                                                    WebElement element = driver.findElement(By.id("element_id"));
+                                                    WebElement element = driver.findElement(By.name("element_name"));
+                                                    // &#x3C;input type=&#x22;test&#x22; name=&#x22;email&#x22;/&#x3E;
+                                                    WebElement element = driver.findElement(By.className("class_name"));
+                                                    WebElement element = driver.findElement(By.tagName("tag_name"));
+                                                    WebElement element = driver.findElement(By.linkText("link_text"));
+                                                    WebElement element = driver.findElement(By.partialLinkText("partial_link_text"));
+                                                    WebElement element = driver.findElement(By.cssSelector("css_selector"));
+                                                    WebElement element = driver.findElement(By.xpath("xpath_expression"));
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button type="button" class="accordion-button collapsed p-2"
+                                            data-bs-toggle="collapse" data-bs-target="#loc-2">
+                                            CSS Locators
+                                        </button>
+                                    </h2>
+                                    <div id="loc-2" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordion-locators">
+                                        <div class="accordion-body p-0">
+                                            <pre>
+                                                <code class="language-java">
+                                                    By.cssSelector("#elementId");
+                                                    By.cssSelector(".className");
+                                                    By.cssSelector("tagName");
+                                                    By.cssSelector("[attribute='value']");
+                                                    By.cssSelector("[attribute1='value1'][attribute2='value2']");
+                                                    By.cssSelector("[attribute^='prefix']");
+                                                    By.cssSelector("[attribute$='suffix']");
+                                                    By.cssSelector("parentTag childTag");
+                                                    By.cssSelector("parentTag > childTag");
+                                                    By.cssSelector("siblingTag ~ siblingTag");
+                                                    By.cssSelector("siblingTag + siblingTag");
+                                                    By.cssSelector("parentTag:nth-child(n)");
+                                                    By.cssSelector("parentTag:first-child");
+                                                    By.cssSelector("parentTag:last-child");
+                                                    By.cssSelector("parentTag:nth-of-type(n)");
+                                                    By.cssSelector("parentTag:first-of-type");
+                                                    By.cssSelector("parentTag:last-of-type");
+                                                    By.cssSelector("tagName:not(.excludedClass)");
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button type="button" class="accordion-button collapsed p-2"
+                                            data-bs-toggle="collapse" data-bs-target="#loc-3">
+                                            Xpath
+                                        </button>
+                                    </h2>
+                                    <div id="loc-3" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordion-locators">
+                                        <div class="accordion-body p-0">
+                                            <pre>
+                                                <code class="language-java">
+// Absolute XPath - Uses a full path from the root element to the desired element.
+By.xpath("/html/body/div[1]/div[2]/div[3]/button");
+
+// Relative XPath - Uses a shorter path starting from the current element or the current context.
+By.xpath("//button[@id='submit']");
+
+// Basic XPath - Select an element by its tag name.
+By.xpath("//tagName");
+
+// XPath with Attributes - Select elements based on attributes.
+By.xpath("//input[@id='username']");
+By.xpath("//button[@class='btn-primary']");
+
+// XPath with Multiple Attributes - Select elements based on multiple attributes.
+By.xpath("//input[@id='username' and @name='user']");
+
+// XPath with Contains Function - Select elements containing a specific attribute value.
+By.xpath("//input[contains(@name, 'user')]");
+
+// XPath with Starts-With Function - Select elements where an attribute value starts with a specific substring.
+By.xpath("//input[starts-with(@name, 'user')]");
+
+// XPath with Text - Select elements based on their text content.
+By.xpath("//a[text()='Sign In']");
+
+// XPath with Index - Select the nth element in a set of matching elements.
+By.xpath("(//input[@type='text'])[2]");
+
+// XPath Axes
+
+// Ancestor Axis - Selects all ancestors (parent, grandparent, etc.) of the current node.
+By.xpath("//div[@class='child']//ancestor::div");
+
+// Ancestor-Or-Self Axis - Selects all ancestors (parent, grandparent, etc.) and the current node.
+By.xpath("//div[@class='child']//ancestor-or-self::div");
+
+// Attribute Axis - Selects all attributes of the current node.
+By.xpath("//input[@id='username']/@*");
+
+// Child Axis - Selects all children of the current node.
+By.xpath("//div[@class='parent']//child::input");
+
+// Descendant Axis - Selects all descendants (children, grandchildren, etc.) of the current node.
+By.xpath("//div[@class='ancestor']//descendant::input");
+
+// Descendant-Or-Self Axis - Selects all descendants and the current node itself.
+By.xpath("//div[@class='ancestor']//descendant-or-self::div");
+
+// Following Axis - Selects everything in the document after the closing tag of the current node.
+By.xpath("//h2[@class='title']//following::div");
+
+// Following-Sibling Axis - Selects all siblings after the current node.
+By.xpath("//div[@class='current']//following-sibling::div");
+
+// Parent Axis - Selects the parent of the current node.
+By.xpath("//div[@class='child']//parent::div");
+
+// Preceding Axis - Selects all nodes before the current node in the document.
+By.xpath("//h2[@class='title']//preceding::div");
+
+// Preceding-Sibling Axis - Selects all siblings before the current node.
+By.xpath("//div[@class='current']//preceding-sibling::div");
+
+// Self Axis - Selects the current node.
+By.xpath("//div[@class='current']//self::div");
+
+// XPath Operators
+
+// And Operator - Combines two conditions and returns true if both conditions are true.
+By.xpath("//input[@type='text' and @name='username']");
+
+// Or Operator - Combines two conditions and returns true if at least one condition is true.
+By.xpath("//input[@type='text' or @type='password']");
+
+// Not Operator - Negates the condition.
+By.xpath("//input[not(@type='hidden')]");
+
+// Relational Operators
+
+// Equals Operator - Checks if the value of an attribute equals a specified value.
+By.xpath("//input[@name='username' and @value='admin']");
+
+// Not Equals Operator - Checks if the value of an attribute does not equal a specified value.
+By.xpath("//input[@name='username' and @value!='admin']");
+
+// Less Than Operator - Checks if the value of an attribute is less than a specified value.
+By.xpath("//input[@value < 100]");
+
+// Greater Than Operator - Checks if the value of an attribute is greater than a specified value.
+By.xpath("//input[@value > 100]");
+
+// Less Than or Equal To Operator - Checks if the value of an attribute is less than or equal to a specified value.
+By.xpath("//input[@value <= 100]");
+
+// Greater Than or Equal To Operator - Checks if the value of an attribute is greater than or equal to a specified value.
+By.xpath("//input[@value >= 100]");
+
+// Arithmetic Operators
+
+// Addition Operator - Adds two numeric values.
+By.xpath("(//input[@type='text'])[position() + 1]");
+
+// Subtraction Operator - Subtracts one numeric value from another.
+By.xpath("(//input[@type='text'])[position() - 1]");
+
+// Multiplication Operator - Multiplies two numeric values.
+By.xpath("//input[@value * 2 = 200]");
+
+// Division Operator - Divides one numeric value by another.
+By.xpath("//input[@value div 2 = 50]");
+
+// Modulus Operator - Returns the remainder of a division.
+By.xpath("//input[@value mod 2 = 1]");
+
+// Union Operator - Combines the results of two XPath expressions.
+By.xpath("//input[@type='text'] | //input[@type='password']");
+
+// XPath Functions
+
+// text() - Returns the text content of an element.
+By.xpath("//a[text()='Sign In']");
+
+// contains() - Checks if a string contains a specified substring.
+By.xpath("//input[contains(@name, 'user')]");
+
+// starts-with() - Checks if a string starts with a specified substring.
+By.xpath("//input[starts-with(@name, 'user')]");
+
+// substring() - Returns a substring from a string.
+By.xpath("//input[substring(@name, 1, 4) = 'user']");
+
+// substring-before() - Returns the substring before a specified delimiter.
+By.xpath("//input[substring-before(@name, '_') = 'user']");
+
+// substring-after() - Returns the substring after a specified delimiter.
+By.xpath("//input[substring-after(@name, '_') = 'name']");
+
+// normalize-space() - Removes leading and trailing spaces from a string.
+By.xpath("//div[normalize-space(text())='Username']");
+
+// boolean() - Converts a value to a boolean.
+By.xpath("//input[boolean(@disabled)]");
+
+// not() - Returns the negation of a boolean value.
+By.xpath("//input[not(@type='hidden')]");
+
+// name() - Returns the name of a node.
+By.xpath("//input[name()='username']");
+
+// local-name() - Returns the local name of a node (excluding the namespace prefix).
+By.xpath("//*[local-name()='input']");
+
+// count() - Returns the number of nodes matching a given expression.
+By.xpath("count(//input)");
+
+// sum() - Returns the sum of numeric values in a set of nodes.
+By.xpath("//input[sum(//prices) > 100]");
+
+// position() - Returns the position of a node in a node set.
+By.xpath("(//input[@type='text'])[position()=2]");
+
+// last() - Returns the last node in a node set.
+By.xpath("(//input[@type='text'])[last()]");
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="selenium-action">
+                            <pre>
+                                <code class="language-java">
+// click() - Clicks on a web element.
+new Actions(driver).click(element).perform();
+// clickAndHold() - Clicks (without releasing) at the current mouse location or on a given element.
+new Actions(driver).clickAndHold(element).perform();
+// contextClick() - Performs a right-click at the current mouse location or on a given element.
+new Actions(driver).contextClick(element).perform();
+// doubleClick() - Performs a double-click at the current mouse location or on a given element.
+new Actions(driver).doubleClick(element).perform();
+// dragAndDrop() - Drags an element from a source location and drops it at a target location.
+new Actions(driver).dragAndDrop(source, target).perform();
+// dragAndDropBy() - Drags an element from its current location and drops it at an offset.
+new Actions(driver).dragAndDropBy(element, 50, 100).perform();
+// moveByOffset() - Moves the mouse from the current position by the given offset.
+new Actions(driver).moveByOffset(50, 100).perform();
+// moveToElement() - Moves the mouse to the middle of the given element.
+new Actions(driver).moveToElement(element).perform();
+// release() - Releases the pressed mouse button at the current mouse location or on a given element.
+new Actions(driver).release().perform();
+// sendKeys() - Sends a sequence of keys to the currently focused element.
+new Actions(driver).sendKeys(element, Keys.ENTER).perform();
+// keyDown() - Performs a key press without releasing it.
+new Actions(driver).keyDown(Keys.CONTROL).perform();
+// keyUp() - Releases a pressed key.
+new Actions(driver).keyUp(Keys.CONTROL).perform();
+// build() - Generates a composite action containing all actions so far.
+Action action = new Actions(driver).moveToElement(element).click().build();
+action.perform();
+// perform() - A convenience method for performing the actions built so far.
+new Actions(driver).moveToElement(element).click().perform();
+                                </code>
+                            </pre>
+                        </div>
+                        <div class="tab-pane fade" id="selenium-wait">
+                            <div class="accordion" id="accordion-wait">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button type="button" class="accordion-button collapsed p-2"
+                                            data-bs-toggle="collapse" data-bs-target="#wait-1">
+                                            Implicit wait
+                                        </button>
+                                    </h2>
+                                    <div id="wait-1" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordion-wait">
+                                        <div class="accordion-body p-0">
+                                            <p>Implicit wait instructs WebDriver to wait for a certain amount of time
+                                                when trying to find an element if it is not immediately available. It
+                                                sets a default wait time for the entire duration of the WebDriver
+                                                session.</p>
+                                            <pre>
+                                <code class="language-java">
+                                    // Set implicit wait
+                                    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                                    // Open a website
+                                    driver.get("<http://example.com>");
+                                    // Interact with elements
+                                    // WebDriver will wait up to 10 seconds for elements to be found
+                                    driver.findElement(By.id("someElementId")).click();
+                                </code>
+                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button type="button" class="accordion-button collapsed p-2"
+                                            data-bs-toggle="collapse" data-bs-target="#wait-2">
+                                            Explicit Wait
+                                        </button>
+                                    </h2>
+                                    <div id="wait-2" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordion-wait">
+                                        <div class="accordion-body p-0">
+                                            <p>Explicit wait allows you to specify a certain condition to wait for
+                                                before proceeding further in the code. It provides more flexibility
+                                                compared to implicit wait as you can target specific elements and
+                                                conditions.</p>
+                                            <pre>
+                                                <code class="language-java">
+                                                    // Define explicit wait
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        // Wait for element to be visible and interact with it
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("someElementId")));
+        element.click();
+                                                </code>
+                                            </pre>
+                                            <ul>
+                                                <li><code>visibilityOfElementLocated(By locator)</code>: Waits for an
+                                                    element to be visible</li>
+                                                <li><code>elementToBeClickable(By locator)</code></li>
+                                                <li><code>presenceOfElementLocated(By locator)</code></li>
+                                                <li><code>textToBePresentInElement(By locator, String text)</code></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button type="button" class="accordion-button collapsed p-2"
+                                            data-bs-toggle="collapse" data-bs-target="#wait-3">
+                                            Fluent wait
+                                        </button>
+                                    </h2>
+                                    <div id="wait-3" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordion-wait">
+                                        <div class="accordion-body p-0">
+                                            <p>Fluent wait is a more advanced type of explicit wait that allows you to
+                                                set the maximum amount of time to wait for a condition, as well as the
+                                                frequency with which to check the condition. Additionally, you can
+                                                ignore specific types of exceptions while waiting.</p>
+                                            <p>Use fluent wait when you need more control over the waiting behavior,
+                                                such as polling intervals and exception handling.</p>
+                                            <pre>
+                                                <code class="language-java">
+                                                    // Define fluent wait
+        FluentWait<WebDriver> wait = new FluentWait<>(driver)
+            .withTimeout(Duration.ofSeconds(10))
+            .pollingEvery(Duration.ofSeconds(1))
+            .ignoring(Exception.class);
+
+        // Wait for element to be present and interact with it
+        WebElement element = wait.until(new Function<WebDriver, WebElement>() {
+            public WebElement apply(WebDriver driver) {
+                return driver.findElement(By.id("someElementId"));
+            }
+        });
+        element.click();
+
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- selenium content end -->
+            <div class="tab-pane fade" id="pills-testng">
+                <h1>Tab TestNG</h1>
+            </div><!-- testng content end -->
+            <div class="tab-pane fade" id="pills-rest">
+                <h1>Tab Rest</h1>
+            </div><!-- rest content end -->
+            <div class="tab-pane fade" id="pills-postman">
+                <h1>Tab Postman</h1>
+            </div><!-- postman content end -->
+            <div class="tab-pane fade" id="pills-maven">
+                <h1>Tab Maven</h1>
+                <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Category</th>
+                            <th>Command</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="6">Basic Commands</td>
+                            <td><code>mvn clean</code></td>
+                            <td>Removes target directory (previous build files)</td>
+                        </tr>
+                        <tr>
+                            <td><code>mvn compile</code></td>
+                            <td>Compiles source code</td>
+                        </tr>
+                        <tr>
+                            <td><code>mvn test</code></td>
+                            <td>Runs tests</td>
+                        </tr>
+                        <tr>
+                            <td><code>mvn package</code></td>
+                            <td>Packages the compiled code into JAR/WAR</td>
+                        </tr>
+                        <tr>
+                            <td><code>mvn install</code></td>
+                            <td>Builds and installs into local repository</td>
+                        </tr>
+                        <tr>
+                            <td><code>mvn deploy</code></td>
+                            <td>Deploys project to remote repository</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="7">Lifecycle Phases</td>
+                            <td><code>mvn validate</code></td>
+                            <td>Validates project configuration</td>
+                        </tr>
+                        <tr>
+                            <td><code>mvn compile</code></td>
+                            <td>Compiles source code</td>
+                        </tr>
+                        <tr>
+                            <td><code>mvn test</code></td>
+                            <td>Runs tests</td>
+                        </tr>
+                        <tr>
+                            <td><code>mvn package</code></td>
+                            <td>Creates JAR/WAR</td>
+                        </tr>
+                        <tr>
+                            <td><code>mvn verify</code></td>
+                            <td>Verifies package meets quality standards</td>
+                        </tr>
+                        <tr>
+                            <td><code>mvn install</code></td>
+                            <td>Installs package into local repository</td>
+                        </tr>
+                        <tr>
+                            <td><code>mvn deploy</code></td>
+                            <td>Deploys to remote repository</td>
+                        </tr>
+                        <tr>
+                            <td>Cleaning</td>
+                            <td><code>mvn clean</code></td>
+                            <td>Cleans up target directory</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">Dependency Management</td>
+                            <td><code>mvn dependency:resolve</code></td>
+                            <td>Resolves dependencies</td>
+                        </tr>
+                        <tr>
+                            <td><code>mvn dependency:list</code></td>
+                            <td>Lists dependencies</td>
+                        </tr>
+                        <tr>
+                            <td><code>mvn dependency:tree</code></td>
+                            <td>Shows dependency tree</td>
+                        </tr>
+                        <tr>
+                            <td><code>mvn dependency:purge-local-repository</code></td>
+                            <td>Clears and re-downloads dependencies</td>
+                        </tr>
+                        <tr>
+                            <td>Skipping Tests</td>
+                            <td><code>mvn install -DskipTests</code></td>
+                            <td>Skips tests during build</td>
+                        </tr>
+                        <tr>
+                            <td>Running Specific Goals</td>
+                            <td><code>mvn &lt;plugin&gt;:&lt;goal&gt;</code></td>
+                            <td>Executes a specific plugin goal, e.g., <code>mvn compiler:compile</code></td>
+                        </tr>
+                        <tr>
+                            <td>Running Application (Spring Boot)</td>
+                            <td><code>mvn spring-boot:run</code></td>
+                            <td>Runs Spring Boot application (if applicable)</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Maven Options</td>
+                            <td><code>mvn &lt;command&gt; -o</code></td>
+                            <td>Offline mode (no downloads)</td>
+                        </tr>
+                        <tr>
+                            <td><code>mvn &lt;command&gt; -U</code></td>
+                            <td>Force update of dependencies</td>
+                        </tr>
+                        <tr>
+                            <td><code>mvn &lt;command&gt; -X</code></td>
+                            <td>Debug mode for detailed logs</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Project Information</td>
+                            <td><code>mvn help:effective-pom</code></td>
+                            <td>Displays effective POM after inheritance/interpolation</td>
+                        </tr>
+                        <tr>
+                            <td><code>mvn help:active-profiles</code></td>
+                            <td>Shows all active profiles</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><!-- manven content end -->
+            <div class="tab-pane fade" id="pills-poi">
+                <h1>Tab POI</h1>
+            </div><!-- poi content end -->
+            <div class="tab-pane fade" id="pills-jenkins">
+                <h1>Tab Jenkins</h1>
+            </div><!-- jenkins content end -->
+            <div class="tab-pane fade" id="pills-git">
+                <h1>Tab Git</h1>
+                <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Category</th>
+                            <th>Command</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="3">Configuration</td>
+                            <td><code>git config --global user.name "Your Name"</code></td>
+                            <td>Sets username</td>
+                        </tr>
+                        <tr>
+                            <td><code>git config --global user.email "your.email@example.com"</code></td>
+                            <td>Sets email</td>
+                        </tr>
+                        <tr>
+                            <td><code>git config --global --list</code></td>
+                            <td>Lists all global configs</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="9">Basic Commands</td>
+                            <td><code>git init</code></td>
+                            <td>Initializes a new repository</td>
+                        </tr>
+                        <tr>
+                            <td><code>git clone &lt;url&gt;</code></td>
+                            <td>Clones a repository</td>
+                        </tr>
+                        <tr>
+                            <td><code>git status</code></td>
+                            <td>Shows status of changes</td>
+                        </tr>
+                        <tr>
+                            <td><code>git add &lt;file&gt;</code></td>
+                            <td>Stages file(s) for commit</td>
+                        </tr>
+                        <tr>
+                            <td><code>git add .</code></td>
+                            <td>Stages all changes in current directory</td>
+                        </tr>
+                        <tr>
+                            <td><code>git commit -m "message"</code></td>
+                            <td>Commits with message</td>
+                        </tr>
+                        <tr>
+                            <td><code>git push</code></td>
+                            <td>Pushes changes to remote repository</td>
+                        </tr>
+                        <tr>
+                            <td><code>git pull</code></td>
+                            <td>Fetches and merges from remote repository</td>
+                        </tr>
+                        <tr>
+                            <td><code>git fetch</code></td>
+                            <td>Fetches changes without merging</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="6">Branching</td>
+                            <td><code>git branch</code></td>
+                            <td>Lists all branches</td>
+                        </tr>
+                        <tr>
+                            <td><code>git branch &lt;branch_name&gt;</code></td>
+                            <td>Creates a new branch</td>
+                        </tr>
+                        <tr>
+                            <td><code>git checkout &lt;branch_name&gt;</code></td>
+                            <td>Switches to a branch</td>
+                        </tr>
+                        <tr>
+                            <td><code>git checkout -b &lt;branch_name&gt;</code></td>
+                            <td>Creates and switches to new branch</td>
+                        </tr>
+                        <tr>
+                            <td><code>git merge &lt;branch_name&gt;</code></td>
+                            <td>Merges branch into current branch</td>
+                        </tr>
+                        <tr>
+                            <td><code>git branch -d &lt;branch_name&gt;</code></td>
+                            <td>Deletes branch locally</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">Stashing</td>
+                            <td><code>git stash</code></td>
+                            <td>Stashes changes for later</td>
+                        </tr>
+                        <tr>
+                            <td><code>git stash apply</code></td>
+                            <td>Applies the latest stash</td>
+                        </tr>
+                        <tr>
+                            <td><code>git stash list</code></td>
+                            <td>Lists all stashes</td>
+                        </tr>
+                        <tr>
+                            <td><code>git stash drop</code></td>
+                            <td>Removes latest stash</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">Viewing History</td>
+                            <td><code>git log</code></td>
+                            <td>Shows commit history</td>
+                        </tr>
+                        <tr>
+                            <td><code>git log --oneline</code></td>
+                            <td>Shows concise history</td>
+                        </tr>
+                        <tr>
+                            <td><code>git log -p</code></td>
+                            <td>Shows changes introduced by each commit</td>
+                        </tr>
+                        <tr>
+                            <td><code>git show &lt;commit_hash&gt;</code></td>
+                            <td>Shows details of a specific commit</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">Undo Changes</td>
+                            <td><code>git reset &lt;file&gt;</code></td>
+                            <td>Unstages file</td>
+                        </tr>
+                        <tr>
+                            <td><code>git reset --hard</code></td>
+                            <td>Resets working directory to last commit</td>
+                        </tr>
+                        <tr>
+                            <td><code>git reset --soft HEAD~1</code></td>
+                            <td>Undoes last commit, keeps changes staged</td>
+                        </tr>
+                        <tr>
+                            <td><code>git revert &lt;commit_hash&gt;</code></td>
+                            <td>Reverts specific commit</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">Working with Remotes</td>
+                            <td><code>git remote -v</code></td>
+                            <td>Lists remote repositories</td>
+                        </tr>
+                        <tr>
+                            <td><code>git remote add origin &lt;url&gt;</code></td>
+                            <td>Adds new remote repository</td>
+                        </tr>
+                        <tr>
+                            <td><code>git push -u origin &lt;branch_name&gt;</code></td>
+                            <td>Pushes branch and sets upstream</td>
+                        </tr>
+                        <tr>
+                            <td><code>git push origin --delete &lt;branch_name&gt;</code></td>
+                            <td>Deletes remote branch</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="5">Tagging</td>
+                            <td><code>git tag &lt;tag_name&gt;</code></td>
+                            <td>Creates a new tag</td>
+                        </tr>
+                        <tr>
+                            <td><code>git tag</code></td>
+                            <td>Lists all tags</td>
+                        </tr>
+                        <tr>
+                            <td><code>git push origin &lt;tag_name&gt;</code></td>
+                            <td>Pushes tag to remote repository</td>
+                        </tr>
+                        <tr>
+                            <td><code>git tag -d &lt;tag_name&gt;</code></td>
+                            <td>Deletes local tag</td>
+                        </tr>
+                        <tr>
+                            <td><code>git push origin --delete &lt;tag_name&gt;</code></td>
+                            <td>Deletes remote tag</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">Helpful Options</td>
+                            <td><code>git diff</code></td>
+                            <td>Shows unstaged changes</td>
+                        </tr>
+                        <tr>
+                            <td><code>git diff --staged</code></td>
+                            <td>Shows staged changes</td>
+                        </tr>
+                        <tr>
+                            <td><code>git diff &lt;branch1&gt; &lt;branch2&gt;</code></td>
+                            <td>Shows diff between two branches</td>
+                        </tr>
+                        <tr>
+                            <td><code>git checkout -- &lt;file&gt;</code></td>
+                            <td>Discards changes to a file</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><!-- git content end -->
+            <div class="tab-pane fade" id="pills-jira">
+                <h1>Tab Jira</h1>
+            </div><!-- jira content end -->
+            <div class="tab-pane fade" id="pills-sql">
+                <h1>Tab SQL</h1>
+            </div><!-- sql content end -->
         </div>
-    </div>
+    </div><!-- content container end -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+    <!-- Prism.js JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+    <!-- Optional: Java Language Component (for Java syntax highlighting) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
 </body>
 
 </html>
